@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "815463722778",
+    "project_id": "artrbir-shift-demo",
+    "storage_bucket": "artrbir-shift-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815463722778:android:0dcd90eae9812d8c7286a3",
+        "android_client_info": {
+          "package_name": "com.shift_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815463722778-mhei0c9i6u5i3qbh1k1q1fkgq7cnat97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByAh-9XKAk0JcPse_ez2Nhr_Ex0X8CR7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815463722778-mhei0c9i6u5i3qbh1k1q1fkgq7cnat97.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "815463722778-dnbtrd8pakihgq71ggku6jlg2kug81ug.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.artibirShift"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
