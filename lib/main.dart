@@ -16,8 +16,7 @@ class StarterApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      theme:
-          ThemeData(primaryColor: Colors.grey[900], ),
+
       smartManagement: SmartManagement.full,
       debugShowCheckedModeBanner: false,
       initialRoute: Routers.home,

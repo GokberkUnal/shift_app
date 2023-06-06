@@ -24,9 +24,7 @@ class LoginScreen extends GetWidget<LoginController> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Spacer(),
-                  Align(
-                      alignment: Alignment.center,
-                      child: Image.asset('assets/images/logo.png')),
+               
                   Spacer(),
                   Align(
                     alignment: Alignment.bottomRight,

@@ -42,7 +42,7 @@ class NotesController extends GetxController {
   
 
   void removeItem(String? id,int i) {
-     FirebaseFirestore.instance.collection('notes').doc(0.toString()).delete().catchError((onError) {
+     FirebaseFirestore.instance.collection('notes').doc(id.toString()).delete().catchError((onError) {
       Get.snackbar("error while delete in", onError.toString());
     });;
      print(id);

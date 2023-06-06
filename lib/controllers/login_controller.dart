@@ -53,7 +53,7 @@ class LoginController extends GetxController {
   Future<void>getUser() async {
     await FirebaseFirestore.instance
         .collection('user')
-        .doc(user!.uid)
+        .doc(user?.uid)
         .get()
         .then(
           (value) =>
