@@ -153,13 +153,13 @@ class ShiftController extends GetxController {
             });
   }
 
-  Future<void> takeDate(String index, int i, int j) async {
+  Future<void> takeDate(String index, int i, int j,String weekId) async {
     week.week[i].slots[j].userColor = loggedInUser.color;
     week.week[i].slots[j].userName = loggedInUser.name;
     week.week[i].slots[j].isEmptyFlag = false;
     await FirebaseFirestore.instance
         .collection("week")
-        .doc(index)
+        .doc(weekId)
         .collection("day")
         .doc("$i")
         .collection("slot")
@@ -172,13 +172,13 @@ class ShiftController extends GetxController {
     update();
   }
 
-  Future<void> deleteDate(String index, int i, int j) async {
+  Future<void> deleteDate(String index, int i, int j,String weekId) async {
     week.week[i].slots[j].userColor = Colors.grey.shade900.value;
     week.week[i].slots[j].userName = '+';
     week.week[i].slots[j].isEmptyFlag = true;
     await FirebaseFirestore.instance
         .collection("week")
-        .doc(index)
+        .doc(weekId)
         .collection("day")
         .doc("$i")
         .collection("slot")
@@ -200,7 +200,7 @@ class ShiftController extends GetxController {
     }
   }
 
-  showDeleteAlertDialog(String index, BuildContext context, int i, int j) {
+  showDeleteAlertDialog(String index, BuildContext context, int i, int j,String weekId) {
     // set up the buttons
     Widget cancelButton = TextButton(
       child: Text("Hayır"),
@@ -211,7 +211,7 @@ class ShiftController extends GetxController {
     Widget continueButton = TextButton(
       child: Text("Evet"),
       onPressed: () {
-        deleteDate(index, i, j);
+        deleteDate(index, i, j,weekId);
 
         Navigator.of(context, rootNavigator: true).pop("evet");
       },
@@ -236,19 +236,19 @@ class ShiftController extends GetxController {
     );
   }
 
-  showDateAlertDialog(String index, BuildContext context, int i, int j) {
+  showDateAlertDialog(String index, BuildContext context, int i, int j,String weekId) {
     // set up the buttons
     Widget cancelButton = TextButton(
       child: Text("Hayır"),
       onPressed: () {
-        deleteDate(index, i, j);
+        deleteDate(index, i, j,weekId);
         Navigator.of(context, rootNavigator: true).pop('hayır');
       },
     );
     Widget continueButton = TextButton(
       child: Text("Evet"),
       onPressed: () {
-        takeDate(index, i, j);
+        takeDate(index, i, j,weekId);
 
         Navigator.of(context, rootNavigator: true).pop("evet");
       },

@@ -199,11 +199,10 @@ class ShiftScreen extends GetView<ShiftController> {
                                                               .name) {
                                                         controller
                                                             .showDeleteAlertDialog(
-                                                                controller
-                                                                    .getCurrentWeekIndex(),
+                                                               controller.currentWeekIndex,
                                                                 context,
                                                                 i,
-                                                                j);
+                                                                j,controller.currentWeekIndex);
                                                       } else {
                                                         ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                                                             content: Text(
@@ -248,11 +247,10 @@ class ShiftScreen extends GetView<ShiftController> {
                                                       } else {
                                                         controller
                                                             .showDateAlertDialog(
-                                                                controller
-                                                                    .getCurrentWeekIndex(),
+                                                               controller.currentWeekIndex,
                                                                 context,
                                                                 i,
-                                                                j);
+                                                                j,controller.currentWeekIndex);
                                                       }
                                                     }
                                                   },
